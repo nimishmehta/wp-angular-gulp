@@ -1,0 +1,29 @@
+// A wrapper for all the blog posts
+.posts
+    h1.content-subhead Pinned Post
+    // A single blog post
+    section.post(ng-repeat="post in posts")
+        header.post-header
+            img.post-avatar(
+                alt="{{ post.author.first_name }}",
+                height='48', width='48',
+                src="{{ post.author.avatar }}")
+            h2.post-title
+                a(ui-sref="post({ id: post.ID, title: post.slug })") {{ post.title }}
+            p.post-meta
+              | By 
+              a.post-author(href='#') {{ post.author.first_name + post.author.last_name }}
+              |  under 
+              a.post-category.post-category-design(href='#') CSS
+              a.post-category.post-category-pure(href='#') Pure
+        .post-description
+            div(ng-bind-html="post.excerpt")
+.footer
+.pure-menu.pure-menu-horizontal
+  ul
+    li.pure-menu-item
+      a.pure-menu-link(href='http://purecss.io/') About
+    li.pure-menu-item
+      a.pure-menu-link(href='http://twitter.com/yuilibrary/') Twitter
+    li.pure-menu-item
+      a.pure-menu-link(href='http://github.com/yahoo/pure/') GitHub

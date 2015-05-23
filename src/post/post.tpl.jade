@@ -1,0 +1,13 @@
+h1 {{ post.title }}
+
+.pure-g.page-content
+    .pure-u-1
+        .post-meta
+            .date
+                {{ post.date | date:'dd MMM yyyy' }}
+            ul.tags
+                li(ng-repeat="tag in post.terms.post_tag")
+                    a(ui-sref="postsByTag({ tag: tag.slug })")
+                        {{ tag.name }}
+
+        .post-body(ng-bind-html="post.content")
