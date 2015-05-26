@@ -4,7 +4,7 @@ A bare-bones blog app running on AngularJS and Gulp designed to work with the Wo
 
 ## Demo
 
-http://www.nimishmehta.com/migration/poc
+coming soon...
 
 This project is initiated with intention of testing Gulp over Grunt, later on integrated with AngularJS and WPApi to give
 the full application picture.
